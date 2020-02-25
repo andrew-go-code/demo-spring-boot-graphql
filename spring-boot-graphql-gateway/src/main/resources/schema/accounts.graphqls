@@ -1,0 +1,43 @@
+"Account page"
+type AccountPage {
+    header: PageHeader
+    "Account list"
+    list: [AccountItem!]
+}
+
+
+"Account interfate"
+interface AccountItem  {
+    id: ID!
+    "Currency"
+    currency: Currency
+    "Card page"
+    cards: CardPage
+    "Amount"
+    amount: Int
+}
+
+"Credit account"
+type CreditAccount implements AccountItem {
+    id: ID!
+    currency: Currency
+    cards: CardPage
+    amount: Int
+    limitAmount: Int
+}
+
+"Current account"
+type CurrentAccount implements AccountItem {
+    id: ID!
+    currency: Currency
+    cards: CardPage
+    amount: Int
+    overdraft: Int
+}
+
+"Currency"
+enum Currency {
+    EUR
+    USD
+    RUB
+}

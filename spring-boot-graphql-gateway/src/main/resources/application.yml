@@ -1,0 +1,8 @@
+graphql:
+  servlet:
+    subscriptions:
+      websocket:
+        path: /graphql
+
+server:
+  port: 8888

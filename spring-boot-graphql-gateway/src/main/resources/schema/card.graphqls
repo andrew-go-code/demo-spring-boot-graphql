@@ -1,0 +1,24 @@
+"Card page"
+type CardPage {
+    header: PageHeader
+    "Card list"
+    list: [CardItem]
+}
+
+"Card"
+type CardItem {
+    id: ID!
+    "Card holder"
+    cardHolder: String
+    "Card number"
+    cardNumber: String
+    "Card status"
+    status: Status
+}
+
+"Status"
+enum Status {
+    ORDERED
+    CREATED
+    BLOCKED
+}

@@ -1,0 +1,14 @@
+query {
+    accounts(pagination: {page: 0, onPage: 1}) {
+        header {
+            page
+            onPage
+            total
+        }
+        list {
+            id
+            currency
+            amount
+        }
+    }
+}

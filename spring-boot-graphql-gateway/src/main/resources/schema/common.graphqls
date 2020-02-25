@@ -1,0 +1,17 @@
+"Page info"
+type PageHeader {
+    "Total elements on page"
+    total: Int
+    "Page number"
+    page: Int
+    "Elements amount on one page"
+    onPage: Int
+}
+
+"Pagination params"
+input Pagination {
+    "Page number"
+    page: Int!
+    "Elements amount on one page"
+    onPage: Int!
+}

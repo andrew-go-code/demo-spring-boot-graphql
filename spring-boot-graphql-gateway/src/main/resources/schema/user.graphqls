@@ -1,0 +1,25 @@
+"User"
+type User {
+    "Login"
+    login: String
+    "Name"
+    name: String
+    "Roles"
+    roles: [String]
+}
+
+"Auth data (login = 'user'; password = 'pass' )"
+input Creds {
+    "Login"
+    login: String!
+    "Password"
+    password: String!
+}
+
+"User info"
+type UserInfo {
+    "User"
+    user: User
+    "Token (used in 'X-Auth-Token' http header)"
+    token: String
+}

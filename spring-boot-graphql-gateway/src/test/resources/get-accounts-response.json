@@ -1,0 +1,18 @@
+{
+  "data": {
+    "accounts": {
+      "header": {
+        "page": 0,
+        "onPage": 3,
+        "total": 1
+      },
+      "list": [
+        {
+          "id": "1",
+          "currency": "RUB",
+          "amount": 1000
+        }
+      ]
+    }
+  }
+}

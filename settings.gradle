@@ -1,0 +1,6 @@
+rootProject.name = 'demo-spring-boot-graphql'
+
+include "spring-boot-graphql-gateway"
+include "spring-boot-account-service"
+include "spring-boot-card-service"
+

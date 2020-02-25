@@ -1,0 +1,58 @@
+mutation {
+    auth(creds :{ login:"user" password: "pass" }){
+        user {
+            login
+            name
+            roles
+        }
+        token
+    }
+}
+
+query {
+    user {
+        login
+        name
+        roles
+    }
+}
+
+
+query {
+    accounts(pagination: {page: 0, onPage: 1}, filter: 1) {
+        header {
+            page
+            onPage
+            total
+        }
+        list {
+            id
+            currency
+            amount
+            cards {
+                list  {
+                    id
+                    cardHolder
+                    cardNumber
+                }
+            }
+        }
+    }
+}
+
+mutation {
+    newCard (accountId: 2)
+}
+
+subscription {
+    notification {
+        note
+    }
+}
+
+mutation {
+    spendMoney(accountId: 1, amount:1000) {
+        id
+        amount
+    }
+}

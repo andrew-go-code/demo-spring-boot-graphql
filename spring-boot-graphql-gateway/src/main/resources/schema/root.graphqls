@@ -1,0 +1,20 @@
+type Query {
+    "Get accounts"
+    accounts(pagination: Pagination, filter: Int): AccountPage
+    "Get user"
+    user: User
+}
+
+type Mutation {
+    "Create new card"
+    newCard(accountId: Int!): CardItem
+    "Withdraw sum from account"
+    spendMoney(accountId: Int!, amount: Int!): AccountItem
+    "Authentication"
+    auth(creds: Creds!): UserInfo
+}
+
+type Subscription {
+    "Listen to notifications"
+    card: CardItem
+}
